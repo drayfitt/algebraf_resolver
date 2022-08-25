@@ -8,8 +8,8 @@ url = "https://szarada.net/krzyzowki/pokaz/o-r-r-h-o-b/"
 words = ['łopatka', 'do', 'wiadra']
 equation = "/"
 hint = [
-#     ['e', 'e', 'ze', '*'],
-#     ['e', 'e', 'od', '+']
+        # ['e', 'e', 'ze', '*'],
+        # ['e', 'e', 'od', '+']
 ]
 
 # resolve algebraf or kryptarytm (uncomment appropriate)

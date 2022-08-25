@@ -41,7 +41,7 @@ def find_equations_from_background(background_image_url):
     response = requests.get(background_image_url)
     img = Image.open(BytesIO(response.content))
 
-    # images dimensinos, what positions to crop images
+    # images dimensions, what positions to crop images
     directions = [
         (208, 66, 238, 96),
         (208, 153, 238, 183),
