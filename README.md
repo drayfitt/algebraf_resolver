@@ -1,6 +1,3 @@
-https://github.com/huggingface/diffusers
-https://github.com/CompVis/stable-diffusion
-
 # Algebraf resolver
 
 Script for resolving mathematics puzzles like algebraf and kryptarytm. It`s based on best polish riddle website: https://szarada.net/
