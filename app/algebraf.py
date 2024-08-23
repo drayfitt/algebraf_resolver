@@ -130,6 +130,19 @@ class Algebraf:
                         itertools.permutations(unique_letters, len(self.digits))]
         return combinations
 
+    def letters_to_digits(self, words, final_words):
+        assignements = set()
+
+        # Iteracja po literach i odpowiadających im cyfrach
+        for letter, digit in zip(words, final_words):
+            for l, c in zip(letter, str(digit)):
+                assignements.add((l, int(c)))
+
+        # Konwersja zbioru na listę i sortowanie według cyfry
+        list_of_assignement = sorted(list(assignements), key=lambda x: x[1])
+        return list_of_assignement
+
+
     def resolve_algebraf(self):
         words, equations = self.find_words_and_equations()
         unique_letters = create_unique_letters(words)
@@ -148,6 +161,10 @@ class Algebraf:
                     and calculate(equations[4], final_words[1], final_words[4]) == final_words[7] \
                     and calculate(equations[5], final_words[2], final_words[5]) == final_words[8]:
                 print("Success! Solution is:", final_words)
+                print("Digits:")
+                list_of_assignement = self.letters_to_digits(words, final_words)
+                for letter, digit in list_of_assignement:
+                    print(f"{digit}: {letter}")
                 exit()
         print("I found nothing :(")
         pass
